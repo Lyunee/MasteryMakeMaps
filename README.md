@@ -1,6 +1,7 @@
 # MasteryMakeMaps #
 Riot API Challenge 2016 (spring)
 
+ * This is my submission to the [RIOT API challenge 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1), following the [API terms and condition ](https://developer.riotgames.com/terms#statement)
  * The website [Mastery Makes Maps](https://championsmaps.herokuapp.com/) presents this entry's results.
  * The present documentation contains the detailed ideas and processes.
  * This entry was written in python.
@@ -15,17 +16,74 @@ Introduction
 
 This is my submission to the [RIOT API challenge 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1).
 
-This entry aims to use the champion mastery points to create a graph (or map) of the champions : the closeness of the champions reflect their similarity.
+This entry uses the champion mastery points to create a graph (or map) of the champions : the closeness of the champions reflects their similarity.
 
-Similarity of the champons are derived from their respective mastery scores for one given player: similar high scores mean they are close. Data of many players are then aggregated to create a large map.
+Similarity of the champions are derived from their respective mastery scores for one given player: similar high scores mean they are close. Data of many players are then aggregated to create a large map.
 
 This graph can be analyzed using graph and community-detection tools. The last one in particular shows the appearance of five groups, which are, as expected, the five in-game positions played. Further analysis would show which champions act as "bridges" between those groups.
 
 Another use of the graph is to look at the neighbors of one champion, thus answering the question : which champions are the most similar to one chosen champion (based on player's willingness and ability to play those)? or, in other words : What would be easy to learn next after mastering champion X, Y or Z?
 
+The following document is organised in five parts : First a very short "How To" guide on how to run the programs and what each does. Second the ideas behind this work are presented. Then the details of the implementations are explained. In the fourth part, the results are shown and discussed, and last I present ideas for further development.
 
 
+How To
+======
 
+Everything was coded in Python, using Python 2.7.
+
+How to sample data
+------------------
+
+Use 'sampleData.py'
+
+Python packages : requests, json, time, sys, datetime
+
+Program steps :
+ * sample players id-s
+ * sample their Champion Mastery and filter them
+ * save the information in the folder "Data" :
+  * name : '\<region\>_\<player-id\>.txt'
+  * content : dictionary {"samplingTime" : , "masteries" : , "playerRank" :}
+  * content : "mastery" is a list of dictionary {"championPoints" : , "championId" :}
+
+User steps :
+ * the folder "Data" needs to be created ahead of time.
+ * the document "RIOT_API_KEY.txt" needs to be present with your API key inside.
+ * run 'python sampleData.py \<option1\> \<option2\>' 
+  * '\<option1\>' can be "master" , "challenger", "other" : will sample master league, or challenger league, or will use feature games to access random leagues. Does not run if the option is missing.
+  * '\<option2\>' can be "euw", "na", "jp", "br" (lower letter) to access the corresponding servers. Other regions might work but haven't been tested. Does not run if the option is missing.
+ * the program will print general information (and error).
+
+How to create the Graph 
+-----------------------
+
+Use 'createGraph.py'
+
+Python packages :
+
+Program steps :
+ * load each data
+ * for each data create the nodes and edges
+ * add the champion images for each nodes
+ * save the graph in 'graphname.txt'
+ * save number of plaer in 'graphname_Nplayer.txt'
+
+User steps :
+ * the folder "Data" must exist
+ * the files in "Data" must have the same content as described in "Sample Data"
+ * the name of the files in "Data" does not matter
+ * if another folder is used to store the data, change the 'FOLDER' variable
+ * run 'python createGraph.py \<graphname\>' (graphname msut be without extention)
+
+Remark : the function 'clearH' removes "weak" edges and the then isolated nodes. This function is not used for our results.
+
+How to get the groups
+---------------------
+
+
+How to draw a graph
+-------------------
 
 Ideas
 =====
@@ -35,6 +93,8 @@ Masteries lead to champion pool
 
 Champion pools lead to similarity of champions
 ----------------------------------------------
+
+The strenght of the link is the mastery values of the "weaker" champion relative to the "stronger" champion.
 
 Similarity of champions = distance between them
 ------------------------------------------------
@@ -79,10 +139,48 @@ The first two points are used to create the file name so we avoid sampling twice
 Sample and Filter Masteries
 ---------------------------
 
+The sampling is performed through sending a request to the [API](https://developer.riotgames.com/api/methods#!/1071/3696) where for one player's id, her/his champion mastery data is returned.
+
+In order to consider the change in the meta, or the evolution of a player, only champions played less than a month ago are kept. This filtering uses the information "lastPlayTime" for the champion.
+
+Furthermore, only the champions with mastery level of 4 or above are taken into account. This is done to avoid forming strong links between less-played champions.
+
+Because of those filters some champions may not appear, most likely those not favored by the current meta (April-May 2016).
+
+Those filters are implemented directly after the sampling stage. Those two steps are coded in the 'getMastery' function in 'sampleData.py'.
 
 
 Create Graphs
 -------------
+
+The python package 'networkx' is used for the graph creation and manipulation
+
+The graph is created through iteration for each player data. For each player :
+ * all champions are added as nodes
+ * links between primary and primary champions are added
+ * links between primary and secondary champions are added
+
+The terminology used here is as follow :
+ * main champion : the champion with the highest score
+ * primary champions : the champions with a score larger than half the main champoin score
+ * secondary champions : champions with a score smaller than half the main champion score
+ * champion pool : all champions (as filtered previously)
+
+For greater clarity, let's consider a fictive player who mastered the following champions (the mastery points are not indicative) :
+ * Illaoi : 13000
+ * Garen : 11000
+ * Rek'Sai : 6300
+ * Malphite : 6100
+ * Sona : 50 
+
+The mastery points clearly show that Sona is not part of this player's champion pool. She would be filtered in the previous step and is thus not considered at all. Illaoi and Garen have both a large amount of mastery points and form the primary champions. Rek'Sai and Malphire have less point but are still consnistantly played by the player. They are part of the secondary champions. In this example, the following links are created :
+ * primary-primary : Illaoi - Garen, 11000/13000
+ * primary-secondary : Illaoi - Rek'Sai, 6300/13000
+ * primary-secondary : Illaoi - Malphite, 6100/13000
+ * primary-secondary : Garen - Rek'Sai,  6300/11000
+ * primary-secondary : Garen - Malphite,  6100/11000
+
+No "secondary-secondary" links are considered so the link Rek'Sai-Malphite (strength of 6100/6300) is not created.
 
 Community detections
 --------------------
