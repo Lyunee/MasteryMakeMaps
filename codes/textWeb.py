@@ -26,11 +26,12 @@ def getImgLinks():
 def listGroups(graphname,the_data,groups):
 	with open( graphname+'_listGroups.txt' , 'w' ) as f:
 		for k in groups.keys():
-			f.write( "<h2> group " + str(k) + " </h2>\n")
+			f.write( "a href=\"group" + str(k) + "\">\n" )
+			f.write( "<h2 class=\"group" + str(k) + "\"> group " + str(k) + " </h2>\n")
 			f.write( "<p>\n" )
 			for n in groups[k]:
 				f.write( textImg(the_data,n) )
-			f.write( "</p>\n\n")
+			f.write( "</p>\n</a>\n\n")
 	print "\nFile " + graphname+"_listGroups.txt created and filled"
 
 
