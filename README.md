@@ -5,8 +5,6 @@ Riot API Challenge 2016 (spring)
  * The website [Mastery Makes Maps](https://championsmaps.herokuapp.com/) presents this entry's results.
  * The present documentation contains the detailed ideas and processes.
  * This entry was written in python.
- * The folder *sampleData* contains the programs used to sample the Champion Mastery Data.
- * The folder *analyseData* contains the programs used to analyse the data and create the graphs.
 
 Those programs were written to run as a python backend of the website, but the backend-to-frontend was not implemented. The backend processes were thus run locally and the results presented in the websites are static.
 
@@ -14,7 +12,7 @@ Those programs were written to run as a python backend of the website, but the b
 Introduction
 ============
 
-This is my submission to the [RIOT API challenge 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1).
+This is my submission to the [RIOT API challenge of April 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1).
 
 This entry uses the champion mastery points to create a graph (or map) of the champions : the closeness of the champions reflects their similarity.
 
@@ -50,7 +48,7 @@ _Program steps_ :
 _User steps_ :
  * the folder "Data" needs to be created ahead of time.
  * the document "RIOT_API_KEY.txt" needs to be present with your API key inside.
- * run 'python sampleData.py \<option1\> \<option2\>' 
+ * run __'python sampleData.py \<option1\> \<option2\>'__ 
   * '\<option1\>' can be "master" , "challenger", "other" : will sample master league, or challenger league, or will use feature games to access random leagues. Does not run if the option is missing.
   * '\<option2\>' can be "euw", "na", "jp", "br" (lower letter) to access the corresponding servers. Other regions might work but haven't been tested. Does not run if the option is missing.
  * the program will print general information (and error).
@@ -75,7 +73,7 @@ _User steps_ :
  * the name of the files in "Data" does not matter
  * a blank image named "white_filler.png" must exist
  * if another folder is used to store the data, change the 'FOLDER' variable
- * run 'python createGraph.py \<graphname\>' (graphname msut be without extention)
+ * run __'python createGraph.py \<graphname\>'__ (graphname msut be without extention)
 
 Remark : the function 'clearH' removes "weak" edges. The isolated nodes it creates are also removed. This function is not used for our results.
 
@@ -95,7 +93,7 @@ _Program steps_ :
 
 _User steps_ :
  * the file "\<graphname\>.txt" must exist
- * run 'python getGroups.py \<graphname\>' (graphname must be without extention)
+ * run __'python getGroups.py \<graphname\>'__ (graphname must be without extention)
 
 
 How to draw a graph
@@ -113,7 +111,7 @@ _Program steps_ :
 
 _User steps_ :
  * the file "\<graphname\>.txt" must exist
- * run 'python grawGraphs.py \<graphname\> \<all,group\> \<img,dot\> \<pos:True,False\>'
+ * run __'python grawGraphs.py \<graphname\> \<all,group\> \<img,dot\> \<pos:True,False\>'__
   * \<graphname\> must be without extention.
   * \<all,groups\> : if all, then draw the whole graph. if groups, draw the graph for each group.
   * \<img,dot\> : if img, uses images for the nodes. if dot, uses color dots.
