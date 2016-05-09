@@ -1,4 +1,5 @@
-<h2> group 0 </h2>
+a href="group0">
+<h2 class="group0"> group 0 </h2>
 <p>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Annie.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Galio.png'>
@@ -29,8 +30,10 @@
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Thresh.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Bard.png'>
 </p>
+</a>
 
-<h2> group 1 </h2>
+a href="group1">
+<h2 class="group1"> group 1 </h2>
 <p>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Olaf.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/XinZhao.png'>
@@ -73,8 +76,10 @@
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Aatrox.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Illaoi.png'>
 </p>
+</a>
 
-<h2> group 2 </h2>
+a href="group2">
+<h2 class="group2"> group 2 </h2>
 <p>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/TwistedFate.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Leblanc.png'>
@@ -101,8 +106,10 @@
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Zed.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Azir.png'>
 </p>
+</a>
 
-<h2> group 3 </h2>
+a href="group3">
+<h2 class="group3"> group 3 </h2>
 <p>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Urgot.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Sivir.png'>
@@ -121,8 +128,10 @@
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Lucian.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Kalista.png'>
 </p>
+</a>
 
-<h2> group 4 </h2>
+a href="group4">
+<h2 class="group4"> group 4 </h2>
 <p>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/MasterYi.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nunu.png'>
@@ -147,4 +156,5 @@
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Vi.png'>
 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/RekSai.png'>
 </p>
+</a>
 
