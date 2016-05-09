@@ -114,7 +114,7 @@ _Program steps_ :
  
 _User steps_ :
  * the file "\<graphname\>.txt" must exist
- * run __'python drawGraphs.py \<graphname\> \<all,group\> \<img,dot\> \<pos:True,False\>'__
+ * run __'python drawGraphs.py \<graphname\> \<all,groups\> \<img,dot\> \<pos:True,False\>'__
   * \<graphname\> must be without extention.
   * \<all,groups\> : if all, then draw the whole graph. if groups, draw the graph for each group.
   * \<img,dot\> : if img, uses images for the nodes. if dot, uses color dots.
