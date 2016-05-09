@@ -37,9 +37,9 @@ How to sample data
 
 Use 'sampleData.py'
 
-Python packages : requests, json, time, sys, datetime
+_Python packages_ : requests, json, time, sys, datetime
 
-Program steps :
+_Program steps_ :
  * sample players id-s
  * sample their Champion Mastery and filter them
  * save the information in the folder "Data" :
@@ -47,7 +47,7 @@ Program steps :
   * content : dictionary {"samplingTime" : , "masteries" : , "playerRank" :}
   * content : "mastery" is a list of dictionary {"championPoints" : , "championId" :}
 
-User steps :
+_User steps_ :
  * the folder "Data" needs to be created ahead of time.
  * the document "RIOT_API_KEY.txt" needs to be present with your API key inside.
  * run 'python sampleData.py \<option1\> \<option2\>' 
@@ -60,30 +60,77 @@ How to create the Graph
 
 Use 'createGraph.py'
 
-Python packages :
+_Python packages_ : sys, os, json, networkx, sampleData.py, cStringIO, urllib2, PIL, pickle
 
-Program steps :
+_Program steps_ :
  * load each data
  * for each data create the nodes and edges
- * add the champion images for each nodes
+ * add the champion images for each nodesm use "white_filler.png" if an error occurs
  * save the graph in 'graphname.txt'
  * save number of plaer in 'graphname_Nplayer.txt'
 
-User steps :
+_User steps_ :
  * the folder "Data" must exist
  * the files in "Data" must have the same content as described in "Sample Data"
  * the name of the files in "Data" does not matter
+ * a blank image named "white_filler.png" must exist
  * if another folder is used to store the data, change the 'FOLDER' variable
  * run 'python createGraph.py \<graphname\>' (graphname msut be without extention)
 
-Remark : the function 'clearH' removes "weak" edges and the then isolated nodes. This function is not used for our results.
+Remark : the function 'clearH' removes "weak" edges. The isolated nodes it creates are also removed. This function is not used for our results.
 
 How to get the groups
 ---------------------
 
+Use 'getGroups.py'
+
+_Python packages_ : sys, networkx, pickle, community
+
+_Program steps_ :
+ * load the graph
+ * apply the 'best_partition' function from the 'community' package
+ * reorganize the result into 'values' : list of the group at which each corresponding node belongs (as listed by the graph)
+ * reorganize the results into 'groups' : a dictionary \{ group_number : \[ list_of_nodes \] \}
+ * save 'values' and 'groups' in '\<graphname\>_groups.txt'
+
+_User steps_ :
+ * the file "\<graphname\>.txt" must exist
+ * run 'python getGroups.py \<graphname\>' (graphname must be without extention)
+
 
 How to draw a graph
 -------------------
+Use 'drawGraphs.py'
+
+_Python packages_ : sys, networkx, pickle, getGroups.py, copy, matplotlib.pyplot
+
+_Program steps_ :
+ * load the graph and additional information
+ * calculate positions of nodes, or load older positions 
+ * plot edges
+ * plot nodes : either colored dots, or champion images
+ * save figure and positions
+
+_User steps_ :
+ * the file "\<graphname\>.txt" must exist
+ * run 'python grawGraphs.py \<graphname\> \<all,group\> \<img,dot\> \<pos:True,False\>'
+  * \<graphname\> must be without extention.
+  * \<all,groups\> : if all, then draw the whole graph. if groups, draw the graph for each group.
+  * \<img,dot\> : if img, uses images for the nodes. if dot, uses color dots.
+  * \<pos:True/False\> : use False the first time it is run, use True if you want to use former positions.
+
+_Important Note_ : The layout of the graphs change with each call of the function. This is because the layout algorithm starts with random positions. For this reason positions are saved and using setting \<pos:True/False\> to True will laod those positions. Care that is one uses False, the old positions will be lost when the new one will be saved.
+
+How to make the website:
+------------------------
+
+_User steps_ :
+ * go to heroku cloud application platform
+ * register and follow the instructions
+ * tweek around to get more pages running
+
+Comment : I chose to host on Heroku for two reasons : they could handle python programming (though I have not yet reached this stage of my project) and their beginner guide is very well made. Associated with django basic tutorial, it was possible for me to get by.
+
 
 Ideas
 =====
@@ -116,7 +163,7 @@ Implementations
 ===============
 
 
-All codes are heavily commented. This allow us to focus here on the general ideas behind the code. A last paragraph is dedicated to the python packages and resources used.
+All codes are (somehow) commented. This allow us to focus here on the general ideas behind the code.
 
 
 Sample players
