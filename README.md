@@ -132,6 +132,54 @@ _User steps_ :
 
 _Comment_ : I chose to host on Heroku for two reasons : they could handle python programming (though I have not yet reached this stage of my project) and their beginner guide is very well made. Associated with django basic tutorial, it was possible for me to get by.
 
+How to get website content:
+---------------------------
+Use 'textWeb.py'
+
+_Python packages_ : getGroups.py, drawGraphs.py, sys, sampleData.py
+
+_Program steps_ :
+ * load the group information
+ * load image links 
+ * create and fill a .txt file with html content (mostly images)
+
+_User steps_ :
+ * the files "\<graphname\>.txt" and "\<graphname\>\_groups.txt" must exist
+ * run __'python textWeb.py \<graphname\> \<option\>'__
+ * \<graphname\> must be without extention.
+ * \<option\> are as follow:
+  * listGroups : to get the format for the main groups.
+  * listSubGroups : to get the format for the sub-groups. <\graphname\> should be a group graph.
+  * allSubGroups : to get all subGroups treated in the sub-group format. <\graphname\>_gr\<numberGroup\> should all exist.
+  * listNeighbors : to get the closest neighbors for all node
+  * bridges : to get the bridges between each group
+
+The last two functions load the graph to find the naighbors and bridges respectively. The function `findBridges(G,group1,group2,N)` returns the N (or less if less) bridges between group1 and group2 (which are lists of nodes).
+
+
+How to Do Everything
+--------------------
+
+ 1.  check that all the packages are installed
+ 2.  create a folder for your study and import all programs
+ 3.  create the folder "Data"
+ 4.  create  the "RIOT_API_KEY.txt" file with your API key in it
+ 5.  open a terminal window and go to your study folder
+ 6.  run `python sampleData.py  \<rank\> \<server\>` for the ranks and servers you are interested in. This samples the data.
+ 7.  run `python createGraph.py \<graphname\>`. This creates and saves the graph from the data.
+ 8.  run `python getGroups.py \<graphname\>`. This identifies and saves the group in the Graph.
+ 9.  run `python drawGraphs.py \<graphname\> all img False`. This creates and saves a layout for the graph, then draws and saves the map with the champions images. 
+ 10. run `python drawGraphs.py \<graphname\> all dot True`. This uses the formely created position to draw and save the same map but with dots colored differently for each group.
+ 11. run `python drawGraphs.py \<graphname\> groups img False`. This draws and saves the map for each group, using the champions images. It also saves the graph of each group independantly.
+ 12. run `python getGroups.py \<graphname\>\_\<group_number\>`. This analyses the group \<group_number\> , identifying and saving the subgroups.
+ 13. run `python drawGraphs.py \<graphname\>\_\<group_number\> all dot True`. This draws the group map with dots color-coded to the subgroup found in the previous step.
+ 14. run `python drawGraphs.py \<graphname\>\_\<group_number\> groups img False`. This draws and saves the map for each sub-group of the group \<group_number\>, using the champions images. It also saves the graph of each sub-group independantly.
+ 15. run `python textWeb.py \<graphname\> listGroups`. This creates a text files with the website content that presents the main groups.
+ 16. run `python textWeb.py \<graphname\> allSubGroups`. This creates text files with website content that describes the sub-groups of each group. The step number 12 msut have been run for all groups for this step to work.
+ 17. run `python textWeb.py \<graphname\> listNeighbors`. This creates a text file with the website content of the closest neighbors page.
+ 18. run `python textWeb.py \<graphname\> bridges`. This creates a text file for the website with the bridges between each groups.
+ 19. create the website using the picture and text files generated
+
 
 Ideas
 =====
