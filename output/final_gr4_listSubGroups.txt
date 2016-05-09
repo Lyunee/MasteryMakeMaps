@@ -1,0 +1,32 @@
+<div class="sgp0"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/LeeSin.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/MasterYi.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Skarner.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Udyr.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Zac.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Shaco.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Shyvana.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Graves.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Rengar.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Ekko.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nocturne.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Khazix.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/JarvanIV.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Vi.png'>
+</p>
+</div>
+
+<div class="sgp1"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Kindred.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nidalee.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Gragas.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nunu.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Evelynn.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/RekSai.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Sejuani.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Elise.png'>
+</p>
+</div>
+

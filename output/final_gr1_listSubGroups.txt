@@ -1,0 +1,50 @@
+<div class="sgp0"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Olaf.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Vladimir.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Ryze.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Gnar.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Quinn.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Irelia.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Gangplank.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Maokai.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Rumble.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Poppy.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Kennen.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Shen.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Fiora.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Hecarim.png'>
+</p>
+</div>
+
+<div class="sgp1"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/XinZhao.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Kayle.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Sion.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Warwick.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Tryndamere.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Jax.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Singed.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Rammus.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/DrMundo.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Trundle.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Swain.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Malphite.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Renekton.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Aatrox.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/MonkeyKing.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Heimerdinger.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nasus.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Pantheon.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Mordekaiser.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Yorick.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Akali.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Garen.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Illaoi.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Malzahar.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Volibear.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Darius.png'>
+</p>
+</div>
+

@@ -1,0 +1,11 @@
+<p>The 3 main bridges are : </br>
+	 ( 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Lucian.png'>
+ , 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/LeeSin.png'>
+) &nbsp &nbsp 
+	 ( 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Vayne.png'>
+ , 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/LeeSin.png'>
+) &nbsp &nbsp 
+	 ( 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Ezreal.png'>
+ , 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/LeeSin.png'>
+) &nbsp &nbsp 
+</p>
