@@ -216,7 +216,7 @@ Summing the graphs, and in particular the weight of the edges might introduce a 
 Neighbors and recommendations
 -----------------------------
 
-Now that the graph is built, one can eploit it. In particular one can now answer the question "What would be easy to learn next after mastering champion C?"
+Now that the graph is built, one can exploit it. In particular one can now answer the question "What would be easy to learn next after mastering champion C?"
 
 Indeed the graph presents the "similarity" of champions from the player's point-of-view. The closest neighbors of one champion are the champions most often found in the same champion pool. _That_ would be the answer to the above questions.
 
@@ -234,14 +234,23 @@ We expect to see five groups appear for the five in-game positions. Indeed a pla
 
 Let us remark that this method associates one champion to one group in a strong sense (belongs or not, 0 or 1). As a next study step, it would be interesting to develop a "soft" attribution where champions can belong to many groups with a certain proportionality. Such attribution would most lilkely be closer to the true use of the champions.
 
-The detection of community can be run for the whole graph but also for the sub-graphs made with those communities. For example, two sub-groups are detected for the support group. They are roughly composed of the  tanky / defensive supports on the one hand and  mage / aggressive supports on the other hand.
+The detection of community can be run for the whole graph but also for the sub-graphs made with those communities. For example, three sub-groups are detected for the support group. They are roughly composed of the  tanky supports, the mage-healer supports and the damage dealer / aggressive supports.
 
 Bridges between groups
 ----------------------
 
 As groups are defined through community detection, an interesting question would be : wich champions stand at the border between two groups? which links between those groups are stronger and could such be considered as bridges?
 
-Such information would again allow a player who wants to diversify her/his champion pool or to learn a new position, to know the path of less resistance for her/his endeavor. _[This has yet to be implemented]_
+Such information would again allow a player who wants to diversify her/his champion pool or to learn a new position, to know the path of less resistance for her/his endeavor.
+
+Looking at the bridges found in this study, it appears that each group has one or two champions which are important bridging champoins :
+ * SUP : Thresh
+ * TOP : more variety but with Fiora and Gangplank more present
+ * MID : Yasuo
+ * ADC : Lucian and Vayne
+ * JNG : Lee Sin
+
+This can be partly explained by the fact that Thresh and Lee Sin for example are "play-making" champions and thus are interesting to master. Another explanation could be that the champions that form the bridges are actually the champions favored by the current meta so "everyone" learns them. It is likely a mix of those elements as well as the true sense of the bridges : those champions stand between the groups.
 
 
 Implementations
@@ -351,7 +360,7 @@ The aim was to create an interactive website with a python backend. To do so, I 
 
 However, at the current stage of the project, a static website is sufficient to present the results.
 
-I followed the [Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) guide to set up the website, and added some pages. I recommand following the first four Django tutorial to know how to modify the main files so additional pages are properly considered.
+I followed the [Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) guide to set up the website, and added some pages. I recommend following the first four Django tutorial to know how to modify the main files so additional pages are properly considered.
 
 I used python to generate some of my website content, in particular the list of champions belonging to each groups (which is actually a list of images).
 
@@ -398,6 +407,6 @@ An idea is to consider squared weight. This should accentuate the similarity and
 CONCLUSION
 ==========
 
-I have shown here how to sample the Champion Mastery Data to create graphs of the champions. Those graphs are based on the "similarity" of the champions from the player point-of-view. It can be analysed to find champions closest neighbors (champions that are the most similar) in order to facilitate the widdening of a player's champion pool.
+I have shown here how to sample the Champion Mastery Data to create graphs of the champions. Those graphs are based on the "similarity" of the champions from the players' point-of-view. It can be analyzed to extract groups of similar champions, or to suggest ways to expand a player's champion pool. The last is achieved using the closest neighbors mastered champoins.
 
-Groups of similar champions are also found in this graph. The groups represent the in-game positions. They can also be analysed : either on how they linked together (bridges between groups) or how they can be divided into more detailed subgroups. 
+The groups of similar champions represent the in-game positions. They can also be analysed : either on how they linked together (bridges between groups) or how they can be divided into more detailed subgroups. 
