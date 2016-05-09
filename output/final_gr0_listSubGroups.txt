@@ -1,0 +1,43 @@
+<div class="sgp0"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Annie.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Galio.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/FiddleSticks.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Teemo.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Leona.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Zilean.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Chogath.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Amumu.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Velkoz.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Lux.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Brand.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Taric.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Ziggs.png'>
+</p>
+</div>
+
+<div class="sgp1"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nami.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Zyra.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Soraka.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Morgana.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Sona.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Janna.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Karma.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Lulu.png'>
+</p>
+</div>
+
+<div class="sgp2"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Alistar.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Thresh.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Nautilus.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Bard.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Blitzcrank.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Braum.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/TahmKench.png'>
+</p>
+</div>
+

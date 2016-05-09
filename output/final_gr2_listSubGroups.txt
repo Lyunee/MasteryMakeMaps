@@ -1,0 +1,34 @@
+<div class="sgp0"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Diana.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/AurelionSol.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Zed.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Talon.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Riven.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Yasuo.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Fizz.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Katarina.png'>
+</p>
+</div>
+
+<div class="sgp1"> 
+<p> 
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/TwistedFate.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Cassiopeia.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Syndra.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Leblanc.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Azir.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Karthus.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Anivia.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Xerath.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Kassadin.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Ahri.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Veigar.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Varus.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Viktor.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Orianna.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Jayce.png'>
+	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Lissandra.png'>
+</p>
+</div>
+

@@ -1,0 +1,11 @@
+<p>The 3 main bridges are : </br>
+	 ( 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Thresh.png'>
+ , 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Yasuo.png'>
+) &nbsp &nbsp 
+	 ( 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Thresh.png'>
+ , 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Zed.png'>
+) &nbsp &nbsp 
+	 ( 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Thresh.png'>
+ , 	<img src='http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/Ahri.png'>
+) &nbsp &nbsp 
+</p>
