@@ -75,7 +75,7 @@ def listClosestNeighbors(graphname,the_data,N):
 		for i in range(min(N,len(neighbors))):
 			f.write( textImg(the_data,neighbors[i]) + " &nbsp ")
 		f.write("</td> </tr>" )
-	f.write("/n</table>")
+	f.write("\n</table>")
 	f.close()
 	print "\nFile " + graphname+"_neighbors.txt created and filled"
 
