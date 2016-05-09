@@ -1,6 +1,8 @@
 # MasteryMakeMaps #
 Riot API Challenge 2016 (spring)
 
+_by Lyunee_
+
  * This is my submission to the [RIOT API challenge 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1), following the [API terms and condition ](https://developer.riotgames.com/terms#statement)
  * The website [Mastery Makes Maps](https://championsmaps.herokuapp.com/) presents this entry's results.
  * The present documentation contains the detailed ideas and processes.
@@ -375,15 +377,16 @@ Less is More
 
 Less sampled players makes for a more visualy pleasing graph. I stumbled on that information while testing my (cleaned) codes on a small set of data (1205 sampled players).
 
-_add image_
+![Map when 1205 players are sampled](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/1205_imgs.png "Map when 1205 players are sampled")
 
 This may be explained by the fact that there are generally less links. Thus champions that are rarelly in the same champion pools appear as not linked at all.
 
 Following this discovery I tried to lessen the number of links with restricting the champion pool to Mastery grades of 5 instead of 4 and 5. The strength of the links are still considered in a similar way.
 
-_add images_
+![Map when only grade 5 champions are considered](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/lesslinks_imgs.png "Map when 1205 players are sampled")
 
-The maps with less link appear very similar to the one previously built. It is thus uncertain that considering less links leads to a more pleasing visualization of the graph. Let us note that the general caracteristic (like the five groups) are consistent between those two maps. In conclusion, when sampling many players, the exact size of the champion pool does not seem to matter (though "main", "primary" ad "secodnary" champions are still considered in both cases).
+
+This map with less link is very similar to the one originally built. Thus, considering less links does not lead to a more pleasing visualization of the graph. Let us note that the general caracteristic (like the five groups) are consistent between those two maps. In conclusion, when sampling many players, the exact size of the champion pool does not seem to matter (though "main", "primary" ad "secondary" champions are still considered in both cases).
 
 Test "mean" Weight
 ------------------
@@ -392,7 +395,9 @@ As explained in "Ideas - Graph of Champions" (see above), simply summing the gra
 
 This should allow for the value of the weight to have more sense. But because we consider only strong links already, applying a mean operation puts every link "strength" to a similar value. This can be seen through the following histogram.
 
-__include histograms here__
+![Histogram of the "mean" weight](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/Hist_mean_weight.png)
+![Histogram of the "sum" weight](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/Hist_sum_weight.png)
+
 
 The map and groups derived from this graph brings little insight as every champions have the same "closeness".
 
@@ -401,7 +406,7 @@ To truly use the "mean" weight, one would need to consider every links in the wi
 Modify the weight
 -----------------
 
-An idea is to consider squared weight. This should accentuate the similarity and dissimmilarity values of the champions nd may lead to a clearer map.
+An idea is to consider squared weight. This should accentuate the similarity and dissimmilarity values of the champions and may lead to a clearer map.
 
 
 CONCLUSION
