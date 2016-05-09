@@ -1,6 +1,8 @@
 # MasteryMakeMaps #
 Riot API Challenge 2016 (spring)
 
+_by Lyunee_
+
  * This is my submission to the [RIOT API challenge 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1), following the [API terms and condition ](https://developer.riotgames.com/terms#statement)
  * The website [Mastery Makes Maps](https://championsmaps.herokuapp.com/) presents this entry's results.
  * The present documentation contains the detailed ideas and processes.
@@ -165,19 +167,19 @@ How to Do Everything
  3.  create the folder "Data"
  4.  create  the "RIOT_API_KEY.txt" file with your API key in it
  5.  open a terminal window and go to your study folder
- 6.  run `python sampleData.py  \<rank\> \<server\>` for the ranks and servers you are interested in. This samples the data.
- 7.  run `python createGraph.py \<graphname\>`. This creates and saves the graph from the data.
- 8.  run `python getGroups.py \<graphname\>`. This identifies and saves the group in the Graph.
- 9.  run `python drawGraphs.py \<graphname\> all img False`. This creates and saves a layout for the graph, then draws and saves the map with the champions images. 
- 10. run `python drawGraphs.py \<graphname\> all dot True`. This uses the formely created position to draw and save the same map but with dots colored differently for each group.
- 11. run `python drawGraphs.py \<graphname\> groups img False`. This draws and saves the map for each group, using the champions images. It also saves the graph of each group independantly.
- 12. run `python getGroups.py \<graphname\>\_\<group_number\>`. This analyses the group \<group_number\> , identifying and saving the subgroups.
- 13. run `python drawGraphs.py \<graphname\>\_\<group_number\> all dot True`. This draws the group map with dots color-coded to the subgroup found in the previous step.
- 14. run `python drawGraphs.py \<graphname\>\_\<group_number\> groups img False`. This draws and saves the map for each sub-group of the group \<group_number\>, using the champions images. It also saves the graph of each sub-group independantly.
- 15. run `python textWeb.py \<graphname\> listGroups`. This creates a text files with the website content that presents the main groups.
- 16. run `python textWeb.py \<graphname\> allSubGroups`. This creates text files with website content that describes the sub-groups of each group. The step number 12 msut have been run for all groups for this step to work.
- 17. run `python textWeb.py \<graphname\> listNeighbors`. This creates a text file with the website content of the closest neighbors page.
- 18. run `python textWeb.py \<graphname\> bridges`. This creates a text file for the website with the bridges between each groups.
+ 6.  run `python sampleData.py  <rank> <server>` for the ranks and servers you are interested in. This samples the data.
+ 7.  run `python createGraph.py <graphname>`. This creates and saves the graph from the data.
+ 8.  run `python getGroups.py <graphname>`. This identifies and saves the group in the Graph.
+ 9.  run `python drawGraphs.py <graphname> all img False`. This creates and saves a layout for the graph, then draws and saves the map with the champions images. 
+ 10. run `python drawGraphs.py <graphname> all dot True`. This uses the formely created position to draw and save the same map but with dots colored differently for each group.
+ 11. run `python drawGraphs.py <graphname> groups img False`. This draws and saves the map for each group, using the champions images. It also saves the graph of each group independantly.
+ 12. run `python getGroups.py <graphname>_<group_number>`. This analyses the group \<group_number\> , identifying and saving the subgroups.
+ 13. run `python drawGraphs.py <graphname>_<group_number> all dot True`. This draws the group map with dots color-coded to the subgroup found in the previous step.
+ 14. run `python drawGraphs.py <graphname>_<group_number> groups img False`. This draws and saves the map for each sub-group of the group \<group_number\>, using the champions images. It also saves the graph of each sub-group independantly.
+ 15. run `python textWeb.py <graphname> listGroups`. This creates a text files with the website content that presents the main groups.
+ 16. run `python textWeb.py <graphname> allSubGroups`. This creates text files with website content that describes the sub-groups of each group. The step number 12 must have been run for all groups for this step to work.
+ 17. run `python textWeb.py <graphname> listNeighbors`. This creates a text file with the website content of the closest neighbors page.
+ 18. run `python textWeb.py <graphname> bridges`. This creates a text file for the website with the bridges between each groups.
  19. create the website using the picture and text files generated
 
 
@@ -216,7 +218,7 @@ Summing the graphs, and in particular the weight of the edges might introduce a 
 Neighbors and recommendations
 -----------------------------
 
-Now that the graph is built, one can eploit it. In particular one can now answer the question "What would be easy to learn next after mastering champion C?"
+Now that the graph is built, one can exploit it. In particular one can now answer the question "What would be easy to learn next after mastering champion C?"
 
 Indeed the graph presents the "similarity" of champions from the player's point-of-view. The closest neighbors of one champion are the champions most often found in the same champion pool. _That_ would be the answer to the above questions.
 
@@ -234,14 +236,23 @@ We expect to see five groups appear for the five in-game positions. Indeed a pla
 
 Let us remark that this method associates one champion to one group in a strong sense (belongs or not, 0 or 1). As a next study step, it would be interesting to develop a "soft" attribution where champions can belong to many groups with a certain proportionality. Such attribution would most lilkely be closer to the true use of the champions.
 
-The detection of community can be run for the whole graph but also for the sub-graphs made with those communities. For example, two sub-groups are detected for the support group. They are roughly composed of the  tanky / defensive supports on the one hand and  mage / aggressive supports on the other hand.
+The detection of community can be run for the whole graph but also for the sub-graphs made with those communities. For example, three sub-groups are detected for the support group. They are roughly composed of the  tanky supports, the mage-healer supports and the damage dealer / aggressive supports.
 
 Bridges between groups
 ----------------------
 
 As groups are defined through community detection, an interesting question would be : wich champions stand at the border between two groups? which links between those groups are stronger and could such be considered as bridges?
 
-Such information would again allow a player who wants to diversify her/his champion pool or to learn a new position, to know the path of less resistance for her/his endeavor. _[This has yet to be implemented]_
+Such information would again allow a player who wants to diversify her/his champion pool or to learn a new position, to know the path of less resistance for her/his endeavor.
+
+Looking at the bridges found in this study, it appears that each group has one or two champions which are important bridging champoins :
+ * SUP : Thresh
+ * TOP : more variety but with Fiora and Gangplank more present
+ * MID : Yasuo
+ * ADC : Lucian and Vayne
+ * JNG : Lee Sin
+
+This can be partly explained by the fact that Thresh and Lee Sin for example are "play-making" champions and thus are interesting to master. Another explanation could be that the champions that form the bridges are actually the champions favored by the current meta so "everyone" learns them. It is likely a mix of those elements as well as the true sense of the bridges : those champions stand between the groups.
 
 
 Implementations
@@ -351,7 +362,7 @@ The aim was to create an interactive website with a python backend. To do so, I 
 
 However, at the current stage of the project, a static website is sufficient to present the results.
 
-I followed the [Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) guide to set up the website, and added some pages. I recommand following the first four Django tutorial to know how to modify the main files so additional pages are properly considered.
+I followed the [Getting Started on Heroku with Python](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) guide to set up the website, and added some pages. I recommend following the first four Django tutorial to know how to modify the main files so additional pages are properly considered.
 
 I used python to generate some of my website content, in particular the list of champions belonging to each groups (which is actually a list of images).
 
@@ -366,15 +377,16 @@ Less is More
 
 Less sampled players makes for a more visualy pleasing graph. I stumbled on that information while testing my (cleaned) codes on a small set of data (1205 sampled players).
 
-_add image_
+![Map when 1205 players are sampled](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/1205_imgs.png "Map when 1205 players are sampled")
 
 This may be explained by the fact that there are generally less links. Thus champions that are rarelly in the same champion pools appear as not linked at all.
 
 Following this discovery I tried to lessen the number of links with restricting the champion pool to Mastery grades of 5 instead of 4 and 5. The strength of the links are still considered in a similar way.
 
-_add images_
+![Map when only grade 5 champions are considered](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/lesslinks_imgs.png "Map when 1205 players are sampled")
 
-The maps with less link appear very similar to the one previously built. It is thus uncertain that considering less links leads to a more pleasing visualization of the graph. Let us note that the general caracteristic (like the five groups) are consistent between those two maps. In conclusion, when sampling many players, the exact size of the champion pool does not seem to matter (though "main", "primary" ad "secodnary" champions are still considered in both cases).
+
+This map with less link is very similar to the one originally built. Thus, considering less links does not lead to a more pleasing visualization of the graph. Let us note that the general caracteristic (like the five groups) are consistent between those two maps. In conclusion, when sampling many players, the exact size of the champion pool does not seem to matter (though "main", "primary" ad "secondary" champions are still considered in both cases).
 
 Test "mean" Weight
 ------------------
@@ -383,7 +395,9 @@ As explained in "Ideas - Graph of Champions" (see above), simply summing the gra
 
 This should allow for the value of the weight to have more sense. But because we consider only strong links already, applying a mean operation puts every link "strength" to a similar value. This can be seen through the following histogram.
 
-__include histograms here__
+![Histogram of the "mean" weight](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/Hist_mean_weight.png)
+![Histogram of the "sum" weight](https://github.com/Lyunee/MasteryMakeMaps/raw/master/images/Hist_sum_weight.png)
+
 
 The map and groups derived from this graph brings little insight as every champions have the same "closeness".
 
@@ -392,12 +406,12 @@ To truly use the "mean" weight, one would need to consider every links in the wi
 Modify the weight
 -----------------
 
-An idea is to consider squared weight. This should accentuate the similarity and dissimmilarity values of the champions nd may lead to a clearer map.
+An idea is to consider squared weight. This should accentuate the similarity and dissimmilarity values of the champions and may lead to a clearer map.
 
 
 CONCLUSION
 ==========
 
-I have shown here how to sample the Champion Mastery Data to create graphs of the champions. Those graphs are based on the "similarity" of the champions from the player point-of-view. It can be analysed to find champions closest neighbors (champions that are the most similar) in order to facilitate the widdening of a player's champion pool.
+I have shown here how to sample the Champion Mastery Data to create graphs of the champions. Those graphs are based on the "similarity" of the champions from the players' point-of-view. It can be analyzed to extract groups of similar champions, or to suggest ways to expand a player's champion pool. The last is achieved using the closest neighbors mastered champoins.
 
-Groups of similar champions are also found in this graph. The groups represent the in-game positions. They can also be analysed : either on how they linked together (bridges between groups) or how they can be divided into more detailed subgroups. 
+The groups of similar champions represent the in-game positions. They can also be analysed : either on how they linked together (bridges between groups) or how they can be divided into more detailed subgroups. 
