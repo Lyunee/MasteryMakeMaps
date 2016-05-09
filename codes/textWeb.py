@@ -132,7 +132,7 @@ if __name__ == "__main__":
 	print "\nGet images links from RIOT API"
 	champ_data = getImgLinks()
 	
-	if sys.argv[2] == "mainGroups":
+	if sys.argv[2] == "listGroups":
 ## for the main groups
 		listGroups(graphname,champ_data,groups)
 	elif sys.argv[2] == "subGroups":
