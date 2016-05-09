@@ -165,19 +165,19 @@ How to Do Everything
  3.  create the folder "Data"
  4.  create  the "RIOT_API_KEY.txt" file with your API key in it
  5.  open a terminal window and go to your study folder
- 6.  run `python sampleData.py  \<rank\> \<server\>` for the ranks and servers you are interested in. This samples the data.
- 7.  run `python createGraph.py \<graphname\>`. This creates and saves the graph from the data.
- 8.  run `python getGroups.py \<graphname\>`. This identifies and saves the group in the Graph.
- 9.  run `python drawGraphs.py \<graphname\> all img False`. This creates and saves a layout for the graph, then draws and saves the map with the champions images. 
- 10. run `python drawGraphs.py \<graphname\> all dot True`. This uses the formely created position to draw and save the same map but with dots colored differently for each group.
- 11. run `python drawGraphs.py \<graphname\> groups img False`. This draws and saves the map for each group, using the champions images. It also saves the graph of each group independantly.
- 12. run `python getGroups.py \<graphname\>\_\<group_number\>`. This analyses the group \<group_number\> , identifying and saving the subgroups.
- 13. run `python drawGraphs.py \<graphname\>\_\<group_number\> all dot True`. This draws the group map with dots color-coded to the subgroup found in the previous step.
- 14. run `python drawGraphs.py \<graphname\>\_\<group_number\> groups img False`. This draws and saves the map for each sub-group of the group \<group_number\>, using the champions images. It also saves the graph of each sub-group independantly.
- 15. run `python textWeb.py \<graphname\> listGroups`. This creates a text files with the website content that presents the main groups.
- 16. run `python textWeb.py \<graphname\> allSubGroups`. This creates text files with website content that describes the sub-groups of each group. The step number 12 msut have been run for all groups for this step to work.
- 17. run `python textWeb.py \<graphname\> listNeighbors`. This creates a text file with the website content of the closest neighbors page.
- 18. run `python textWeb.py \<graphname\> bridges`. This creates a text file for the website with the bridges between each groups.
+ 6.  run `python sampleData.py  <rank> <server>` for the ranks and servers you are interested in. This samples the data.
+ 7.  run `python createGraph.py <graphname>`. This creates and saves the graph from the data.
+ 8.  run `python getGroups.py <graphname>`. This identifies and saves the group in the Graph.
+ 9.  run `python drawGraphs.py <graphname> all img False`. This creates and saves a layout for the graph, then draws and saves the map with the champions images. 
+ 10. run `python drawGraphs.py <graphname> all dot True`. This uses the formely created position to draw and save the same map but with dots colored differently for each group.
+ 11. run `python drawGraphs.py <graphname> groups img False`. This draws and saves the map for each group, using the champions images. It also saves the graph of each group independantly.
+ 12. run `python getGroups.py <graphname>_<group_number>`. This analyses the group \<group_number\> , identifying and saving the subgroups.
+ 13. run `python drawGraphs.py <graphname>_<group_number> all dot True`. This draws the group map with dots color-coded to the subgroup found in the previous step.
+ 14. run `python drawGraphs.py <graphname>_<group_number> groups img False`. This draws and saves the map for each sub-group of the group \<group_number\>, using the champions images. It also saves the graph of each sub-group independantly.
+ 15. run `python textWeb.py <graphname> listGroups`. This creates a text files with the website content that presents the main groups.
+ 16. run `python textWeb.py <graphname> allSubGroups`. This creates text files with website content that describes the sub-groups of each group. The step number 12 must have been run for all groups for this step to work.
+ 17. run `python textWeb.py <graphname> listNeighbors`. This creates a text file with the website content of the closest neighbors page.
+ 18. run `python textWeb.py <graphname> bridges`. This creates a text file for the website with the bridges between each groups.
  19. create the website using the picture and text files generated
 
 
