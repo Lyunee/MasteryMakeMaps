@@ -6,8 +6,8 @@ _by Lyunee_
 
  * This is my submission to the [RIOT API challenge 2016](https://developer.riotgames.com/discussion/announcements/show/eoq3tZd1), following the [API terms and condition ](https://developer.riotgames.com/terms#statement)
  * The website [Mastery Makes Maps](https://championsmaps.herokuapp.com/) presents this entry's results.
- * The [documentation](https://github.com/Lyunee/MasteryMakeMaps/raw/master/Documentation.md) contains the detailed ideas and processes.
- * The [HowTo document](https://github.com/Lyunee/MasteryMakeMaps/raw/master/HowTo.md) presents the steps to follow in order to reproduce the results.
+ * The [documentation](https://github.com/Lyunee/MasteryMakeMaps/blob/master/Documentation.md) contains the detailed ideas and processes.
+ * The [HowTo document](https://github.com/Lyunee/MasteryMakeMaps/blob/master/HowTo.md) presents the steps to follow in order to reproduce the results.
  * The codes are in the "code" folder
  * The folder "output" contains the files generated through the analysis of the data, as well as the files used for the presentation of the results in the website.
  * The folder "images" contains a few additional images used in the documentation.
