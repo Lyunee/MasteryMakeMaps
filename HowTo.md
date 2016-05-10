@@ -7,9 +7,6 @@ _by Lyunee_
 This document explains how to use the programs in the "code" folder, and how to reproduce the analysis I have done for this challenge entry.
 
 
-How To
-======
-
 Everything was coded in [Python](https://www.python.org/), using Python 2.7.
 
 I recommend using `pip` to install packages that are not already included within your python. 
@@ -160,4 +157,4 @@ How to Do Everything
  16. run `python textWeb.py <graphname> allSubGroups`. This creates text files with website content that describes the sub-groups of each group. The step number 12 must have been run for all groups for this step to work.
  17. run `python textWeb.py <graphname> listNeighbors`. This creates a text file with the website content of the closest neighbors page.
  18. run `python textWeb.py <graphname> bridges`. This creates a text file for the website with the bridges between each groups.
- 19. create the website using the picture and text files generated
+ 19. use the pictures and text files generated to fill the website's pages
