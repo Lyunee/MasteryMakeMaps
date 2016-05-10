@@ -15,6 +15,7 @@ _by Lyunee_
 
 _Those programs were written to run as a python backend of the website, but the backend-to-frontend was not implemented. The backend processes were thus run locally and the results presented in the website [Mastery Makes Maps](https://championsmaps.herokuapp.com/) are static._
 
+----------------------------------------------
 
 This entry uses the champion mastery points to create a graph (or map) of the champions. This graph is based on the "similarity" of the champions from the players' point-of-view.
 
